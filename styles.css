@@ -1,0 +1,388 @@
+body {
+   margin: 0;
+   background: url(img/bg1920.png);
+   background-repeat: no-repeat;
+   overflow: hidden;
+}
+
+.container {
+   margin: auto;
+   width: 82%;
+}
+
+.header {
+   padding-bottom: 65px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header__logo {
+   position: relative;
+   margin-top: -10px;
+   padding: 51px 0;
+   padding-left: 68px;
+   font: 36px/36px 'pt_sans_captionbold';
+   color: grey;
+}
+
+.logo__square {
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   border-radius: 23%;
+   opacity: .7;
+}
+
+.logo__square_color_orange,
+.logo__square_color_dark-orange {
+   width: 30px;
+   height: 30px;
+   transform: rotate(48deg);
+   opacity: .7;
+}
+
+.logo__square_color_orange {
+   left: 13%;
+   top: 37%;
+   background: #FFBE4D;
+}
+
+.logo__square_color_dark-orange {
+   top: 41%;
+   left: 17%;
+   background: #E89C38;
+}
+
+.menu {
+   display: flex;
+   align-items: center;
+}
+
+.menu__item {
+   position: relative;
+   margin-right: 28px;
+   font: 17px/17px 'pt_sans_captionbold';
+   color: grey;
+   text-decoration: none;
+   transition: opacity .5s;
+}
+
+.menu__item:after {
+   position: absolute;
+   left: 0;
+   display: block;
+   content: '';
+   width: 0;
+   height: 3px;
+   background: #E89C38;
+   opacity: 0;
+   transition: opacity .5s, width .5s;
+}
+
+.menu__item:hover {
+   opacity: .5;
+}
+
+.menu__item:hover:after {
+   opacity: 1;
+   width: 100%;
+}
+
+.menu__item:last-child {
+   padding-right: 0;
+}
+
+.menu__item:hover:after {
+   position: absolute;
+   left: 0;
+   display: block;
+   content: '';
+   width: 100%;
+   height: 3px;
+   background: #E89C38;
+}
+
+.main {
+   padding-bottom: 30%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: url(img/phone1920.png);
+   background-repeat: no-repeat;
+   background-position: bottom 6px center;
+}
+
+.text__logo {
+   display: none;
+}
+
+.container__text {
+   padding-bottom: 59px;
+   width: 53%;
+   text-align: center;
+}
+
+.main__text {
+   font: 40px/48px 'pt_sans_captionbold';
+   color: grey;
+}
+
+.main__apps {
+   padding-bottom: 97px;
+}
+
+.main__appsAdd {
+   display: none;
+}
+
+.main__phone {
+   padding-bottom: 97px;
+}
+
+@media (max-width: 1366px) {
+   body {
+      background: url(img/bg1366.png);
+   }
+
+   .container {
+      width: 81%;
+   }
+
+   .header {
+      padding-bottom: 31px;
+   }
+
+   .header__logo {
+      margin-left: 62px;
+      font: 27px/27px 'pt_sans_captionbold';
+   }
+
+   .logo__square_color_orange,
+   .logo__square_color_dark-orange {
+      width: 23px;
+      height: 23px;
+   }
+
+   .logo__square_color_orange {
+      top: 39%;
+      left: 23%;
+   }
+
+   .logo__square_color_dark-orange {
+      top: 41%;
+      left: 25%;
+   }
+
+   .menu__item {
+      margin-right: 24px;
+      font: 14px/14px 'pt_sans_captionbold';
+   }
+
+   .main {
+      background: url(img/phone1366.png);
+      background-repeat: no-repeat;
+      background-position: bottom center;
+   }
+
+   .container__text {
+      padding-bottom: 34px;
+      width: 65%;
+   }
+
+   .main__text {
+      font: 32px/46px 'pt_sans_captionbold';
+   }
+
+   .main__apps {
+      padding-bottom: 117px;
+      width: 26%;
+   }
+}
+
+@media (max-width: 1170px) {
+   body {
+      background: url(img/bg1170.png);
+   }
+
+   .container {
+      width: 94%;
+   }
+
+   .header {
+      padding-bottom: 33px;
+   }
+
+   .header__logo {
+      margin-left: 58px;
+   }
+
+   .menu__item {
+      margin-right: 23px;
+   }
+
+   .main__text {
+      font: 32px/45px 'pt_sans_captionbold';
+   }
+
+   .main__apps {
+      width: 27%;
+   }
+}
+
+@media (max-width: 925px) {
+   body {
+      background: none;
+   }
+
+   .header {
+      padding-right: 28px;
+      padding-top: 56px;
+      padding-bottom: 43px;
+      justify-content: flex-end;
+   }
+
+   .header__logo {
+      display: none;
+   }
+
+   .menu__icon {
+      margin-right: -3px;
+      z-index: 5;
+      display: block;
+      position: relative;
+      width: 29px;
+      height: 17px;
+      cursor: pointer;
+   }
+
+   .menu__icon span,
+   .menu__icon::before,
+   .menu__icon::after {
+      position: absolute;
+      left: 0;
+      height: 20%;
+      width: 88%;
+      transition: all .3s ease 0s;
+      background-color: #FF9100;
+   }
+
+   .menu__icon::before,
+   .menu__icon::after {
+      content: '';
+   }
+
+   .menu__icon::before {
+      top: 0;
+   }
+
+   .menu__icon::after {
+      bottom: 0;
+   }
+
+   .menu__icon span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+   }
+
+   .menu__icon._active span {
+      transform: scale(0) translate(0px, -50%);
+   }
+
+   .menu__icon._active::before {
+      top: 47%;
+      transform: rotate(-45deg) translate(0px, -50%);
+   }
+
+   .menu__icon._active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 50%);
+   }
+
+   .menu {
+      position: fixed;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      overflow: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 8px;
+      transition: all .3s ease 0s;
+   }
+
+   .menu._active {
+      left: 0;
+      z-index: 1;
+   }
+
+   .menu > a {
+      margin: -37px -26px 41px 0;
+   }
+
+   .menu > a:last-child {
+      margin-bottom: 0;
+   }
+
+   .menu__item {
+      font: 30px/47px 'MuseoSansCyrl-700';
+      color: #000;
+   }
+
+   .main {
+      padding-bottom: 49%;
+      background: url(img/phone375.png);
+      background-repeat: no-repeat;
+      background-position: bottom center;
+   }
+
+   .logo__square_color_orange,
+   .logo__square_color_dark-orange {
+      width: 35px;
+      height: 35px;
+   }
+
+   .logo__square_color_dark-orange {
+      top: 18%;
+      left: 25%;
+   }
+
+   .logo__square_color_orange {
+      top: 17%;
+      left: 24%;
+   }
+
+   .container__text {
+      margin-left: -4%;
+      padding-bottom: 65px;
+      width: 85%;
+   }
+
+   .text__logo {
+      display: inline-block;
+      padding-left: 24px;
+      padding-bottom: 31px;
+      font: 40px/40px 'pt_sans_captionbold';
+      color: #000;
+   }
+
+   .main__text {
+      font: 24px/30px 'pt_sans_captionbold';
+      color: #000;
+   }
+
+   .main__apps {
+      display: none;
+   }
+
+   .main__appsAdd {
+      display: inline-block;
+      margin-left: -7px;
+      padding-bottom: 33%;
+   }
+}
